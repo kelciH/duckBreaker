@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f7d4ff;
+  text-align: center;
+}
+
+p {
+  font-size: 60px;
+  margin: 20px 0 40px;
+}
+
+/* Game area */
+#game {
+  position: relative;
+  width: 960px;
+  height: 640px;
+  margin: 0 auto;
+  border: 3px solid white;
+  background-color: #f7d4ff;
+  overflow: hidden;
+}
+
+/* Ball */
+#ball {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: black;
+}
+
+/* Paddle */
+#paddle {
+  position: absolute;
+  bottom: 10px;
+  width: 120px;
+  height: 20px;
+  background-image: url("../images/brick.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Bricks */
+#bricks {
+  position: relative;
+  width: 960px;
+  height: 400px;
+}
+
+.brick {
+  width: 120px;
+  height: 60px;
+  position: absolute;
+  background-image: url(/images/brick.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#controls {
+  width: 960px;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+/* End screen overlay */
+#endScreen {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#endScreen h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+#endScreen button {
+  padding: 12px 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#endScreen.hidden {
+  display: none;
+}
